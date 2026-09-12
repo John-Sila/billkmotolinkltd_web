@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-canvas text-brand-900 antialiased;
+  font-feature-settings: 'ss01' 1, 'cv01' 1;
+}
+
+.dark body {
+  @apply bg-ink text-white;
+}
+
+::selection {
+  background: #00796b;
+  color: white;
+}
+
+/* Thin, quiet scrollbars — this is a data console, not a marketing page */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 121, 107, 0.35) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 121, 107, 0.3);
+  border-radius: 999px;
+}
+
+:focus-visible {
+  outline: 2px solid #00796b;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
