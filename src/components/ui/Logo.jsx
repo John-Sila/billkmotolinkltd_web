@@ -16,7 +16,7 @@ import { Zap } from 'lucide-react';
  *  meantime.
  * ============================================================================
  */
-const LOGO_SRC = '/logo.svg';
+const LOGO_SRC = '/logo.png';
 
 export default function Logo({ size = 40, rounded = 'rounded-2xl', className = '' }) {
   const [failed, setFailed] = useState(false);
